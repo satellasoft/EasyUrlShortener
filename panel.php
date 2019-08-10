@@ -4,6 +4,9 @@ session_start();
 if(!isset($_SESSION["auth"])){
   header("Location: login.php?q=2");
 }
+require_once("App/config.php");
+require_once("App/App.php");
+$app = new App();
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">

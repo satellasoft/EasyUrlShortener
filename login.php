@@ -27,16 +27,14 @@ if($txtUserKey){
   <link rel="shortcut icon" href="img/favicon.ico">
 </head>
 <body>
-  <div class="max-width bg-white padding">
+  <div class="max-width-login bg-white padding" style="margin-top:15%;">
     <h1>Easy URL Shortener</h1>
     <br>
     <form method="post" onsubmit="return Login();">
-      <label>User key <input class="input" type="text" name="txtUserKey" id="txtUserKey" placeholder="Put your key here"> </label>
-      <button type="submit" class="input" name="button">Login</button>
+      <input class="input full-width" type="text" name="txtUserKey" id="txtUserKey" placeholder="Put your key here">
+      <button type="submit" class="input btn-login full-width" name="button">Login</button>
     </form>
     <p id="pResult"><?=$result;?>&nbsp;</p>
-    <br>
-    <p><a href="https://www.satellasoft.com">SatellaSoft</a> - Easy URL Shortener 2019</p>
   </div>
   <script src="js/script.js"></script>
 </body>

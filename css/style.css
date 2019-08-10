@@ -32,12 +32,23 @@ a{
   width:100%;
 }
 
+.max-width-login{
+  max-width: 400px;
+  width:100%;
+}
+
 .bold{
   font-weight: bold;
 }
 
 .input{
   padding: 8px;
+  outline: none;
+}
+
+.full-width{
+  width:100%;
+  box-sizing: border-box;
 }
 
 .text{
@@ -61,6 +72,17 @@ a{
   color: #FFF;
 }
 
+.btn-login{
+  outline: none;
+  border:none;
+  background-color: #16ccf7;
+}
+
+.btn-login:hover{
+  background-color: #54696e;
+  cursor: pointer;
+  color: #FFF;
+}
 
 .btn-remove{
   outline: none;
