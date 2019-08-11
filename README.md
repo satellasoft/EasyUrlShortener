@@ -14,7 +14,7 @@ Just extract the files to a folder on your server, and that's it, it's working, 
 
 # config.php
 
-```
+```php
 <?php
   define("USERKEY", "a12345z");
   define("URLLENGTH", 5);
