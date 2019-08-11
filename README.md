@@ -1,5 +1,4 @@
 # EasyUrlShortener
-EASY URL SHORTENER
 
 # About
 
@@ -22,3 +21,8 @@ Just extract the files to a folder on your server, and that's it, it's working, 
   define("PATH", "data");
 ?>
 ```
+
+- **USERKEY**: Access password
+- **URLLENGTH**: Amount of characters to be generated
+- **SITEURL**: URL to your site, ex https://site.com/url?u=. Do not remove Query String /url?=u
+- **PATH**: Directory where files will be created
