@@ -36,3 +36,17 @@ All URLs are persisted in text files, for each URLs a new one is created. Don't 
 - **URLLENGTH**: Amount of characters to be generated
 - **SITEURL**: URL to your site, ex https://site.com/url?u=. Do not remove Query String /url?=u
 - **PATH**: Directory where files will be created
+
+# Manipulating the information
+
+## Inserting
+Go to the admin panel, at the top you must enter in the text field the URL you want to shorten, then click the **Create** button.
+## Removing
+Click the **Remove** button corresponding to the URL you want to remove. A dialog box should open, confirming the deletion.
+## Query
+Each table row corresponds to a URL, each column contains information.
+
+- **ID**: filename and URL identifier.
+- **Original URL**: Registered original URL, which will be redirected when accessing the new URL.
+- **New URL**: New URL generated. By clicking on the text field the content is copied to the clipboard.
+- **Access**: Number of accesses through the new URL.
