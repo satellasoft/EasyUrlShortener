@@ -11,23 +11,28 @@ function CreateURL(){
   }
 }
 
-function Delete(id){
-  if(id == 0 || id == "")
-  return;
-  if(confirm("Do you really want to remove this URL?"))
-  console.log(id);
+function Delete(event){
+  if(!confirm("Do you really want to remove this URL?"))
+    return;
+    event.disabled = true;
+    event.value = "REMOVED";
+    window.open("remove.php?id="+ event.getAttribute("data-id"), "_blank")
 }
 
 function Login(){
   var txtUserKey = document.getElementById("txtUserKey").value;
   var pResult = document.getElementById("pResult");
   pResult.innerHTML = "";
-  if(txtUserKey.length <=3){
+  if(txtUserKey.length <= 3){
     pResult.innerHTML = "<span style='color: red;'>Invalid User key</span>";
     return false;
   }
   else{
     return true;
   }
+}
 
+function Copy(event){
+  event.select();
+  document.execCommand("copy");
 }

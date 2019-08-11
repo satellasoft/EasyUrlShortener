@@ -27,6 +27,10 @@ a{
   box-sizing: border-box;
 }
 
+.cursor{
+  cursor: pointer;
+}
+
 .max-width{
   max-width: 800px;
   width:100%;
@@ -92,6 +96,15 @@ a{
   width: 100%;
 }
 
+.btn-remove:disabled{
+  outline: none;
+  border:none;
+  background-color: #111;
+  color:#FFF;
+  font-weight: bold;
+  width: 100%;
+}
+
 .btn-remove:hover{
   background-color: #473030;
   cursor: pointer;
@@ -112,6 +125,16 @@ a{
   color:#FFF;
 }
 
+.table tbody tr td:hover a{
+  color:#FFF;
+}
+
 .table td{
   padding:5px;
+}
+
+.link{
+  padding:10px;
+  margin:5px;
+  background-color:#EEE;
 }

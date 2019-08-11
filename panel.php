@@ -7,6 +7,15 @@ if(!isset($_SESSION["auth"])){
 require_once("App/config.php");
 require_once("App/App.php");
 $app = new App();
+
+$txt = filter_input(INPUT_POST, "txtUrl", FILTER_SANITIZE_URL);
+if($txt){
+  if($app->Write($txt)){
+    header("Location: panel.php");
+  }
+}
+
+$listUrl = $app->ReadAll();
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -24,8 +33,8 @@ $app = new App();
       <div style="float: left; width: 500px;">
         <h1>Easy URL Shortener</h1>
       </div>
-      <div style="float: right; text-align: right; width:50px;">
-        <a href="logout.php">X</a>
+      <div style="float: right; text-align: right; width:80px;">
+        <a class="link" href="panel.php">R</a><a class="link" href="logout.php">X</a>
       </div>
       <div style="clear:both;"></div>
     </div>
@@ -43,20 +52,32 @@ $app = new App();
         <thead>
           <tr>
             <th>ID</th>
-            <th>ORINAL URL</th>
+            <th>ORIGINAL URL</th>
             <th>NEW URL</th>
             <th>ACCESS</th>
             <th>REMOVE</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>16516506</td>
-            <td>satellasoft.com/</td>
-            <td>satellasoft.com/156181</td>
-            <td>55</td>
-            <td><input type="button" class="input btn-remove" value="REMOVE" onclick="Delete(32);"/></td>
-          </tr>
+          <?php
+          if($listUrl != null){
+            foreach ($listUrl as $l) {
+              ?>
+              <tr>
+                <td><?=$l->getId();?></td>
+                <td><a href="<?=$l->getUrl();?>" target="_blank"><?=$l->getUrl();?></a></td>
+                <td>
+                  <input class="input full-width cursor" type="text"
+                  value="<?=SITEURL?><?=$l->getId();?>"
+                  onclick="Copy(this);"/>
+                </td>
+                <td style="text-align: center; font-weight: bold; color: red;"><?=$l->getAccess();?></td>
+                <td><input type="button" class="input btn-remove" value="REMOVE" onclick="Delete(this);" data-id="<?=$l->getId();?>"/></td>
+              </tr>
+              <?php
+            }
+          }
+          ?>
         </tbody>
       </table>
     </div>
