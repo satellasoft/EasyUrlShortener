@@ -44,9 +44,13 @@ Go to the admin panel, at the top you must enter in the text field the URL you w
 ## Removing
 Click the **Remove** button corresponding to the URL you want to remove. A dialog box should open, confirming the deletion.
 ## Query
-Each table row corresponds to a URL, each column contains information.
+Each table row corresponds to a URL, each column contains information:
 
 - **ID**: filename and URL identifier.
 - **Original URL**: Registered original URL, which will be redirected when accessing the new URL.
 - **New URL**: New URL generated. By clicking on the text field the content is copied to the clipboard.
 - **Access**: Number of accesses through the new URL.
+## Updating and leaving the page
+- To exit the page, simply click the **X** button located at the top right of the screen.
+- To refresh the page, simply click the **R** button located at the top right of the screen.
+
