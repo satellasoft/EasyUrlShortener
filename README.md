@@ -14,7 +14,7 @@ Just extract the files to a folder on your server, and that's it, it's working, 
 All URLs are persisted in text files, for each URLs a new one is created. Don't worry, the application ensures that there are no files with duplicate names. File names have the extension **.db**.
 
 # Pages
-- **App/Config**: Configuration file, requires editing only once.
+- **App/config**: Configuration file, requires editing only once.
 - **index.php**: Main file, responsible for directing.
 - **login.php**: Authentication page, enter the password set in the **config.php** file.
 - **panel.php**: Panel to insert, query and delete your URLs.
