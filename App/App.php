@@ -26,23 +26,24 @@ class App{
 
   function GetUniqueId(){
     $allFiles= $this->ReadAll();
-
     $valid = false;
     $uniqueId = $this->GetRandomString(URLLENGTH);
 
-    while(!$valid){
-      $v = true;
+    if($allFiles != null){
+      while(!$valid){
+        $v = true;
 
-      for ($i=0; $i < count($allFiles); $i++) {
-        if(substr($allFiles[$i], 0, -3) == $uniqueId){
-          $v = false;
+        for ($i=0; $i < count($allFiles); $i++) {
+          if(substr($allFiles[$i], 0, -3) == $uniqueId){
+            $v = false;
+          }
         }
-      }
 
-      if(!$v){
-        $uniqueId = $this->GetRandomString(URLLENGTH);
-      }else{
-        $valid = true;
+        if(!$v){
+          $uniqueId = $this->GetRandomString(URLLENGTH);
+        }else{
+          $valid = true;
+        }
       }
     }
 

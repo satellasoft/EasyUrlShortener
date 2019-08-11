@@ -25,15 +25,16 @@ $listUrl = $app->ReadAll();
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/unsemantic-grid-responsive.css">
   <link rel="shortcut icon" href="img/favicon.ico">
 </head>
 <body>
   <div class="max-width bg-white padding">
     <div>
-      <div style="float: left; width: 500px;">
+      <div class="grid-80 mobile-grid-70">
         <h1>Easy URL Shortener</h1>
       </div>
-      <div style="float: right; text-align: right; width:80px;">
+      <div class="grid-20 mobile-grid-30" style="text-align: right;">
         <a class="link" href="panel.php">R</a><a class="link" href="logout.php">X</a>
       </div>
       <div style="clear:both;"></div>
@@ -41,19 +42,24 @@ $listUrl = $app->ReadAll();
     <br>
     <div id="dvForm" onsubmit="return CreateURL();">
       <form method="post">
-        <input class="input text" type="text" name="txtUrl" id="txtUrl" placeholder="Your URL here">
-        <input class="input btn bold" type="submit" name="btnCreate" value="Create">
+        <div class="grid-80 mobile-grid-100">
+          <input class="input text full-width" type="text" name="txtUrl" id="txtUrl" placeholder="Your URL here">
+        </div>
+        <div class="grid-20 mobile-grid-100">
+          <input class="input btn bold full-width" type="submit" name="btnCreate" value="Create">
+        </div>
+        <div class="clear"></div>
       </form>
       <p id="pResult">&nbsp;</p>
     </div>
     <br>
-    <div id="dvTable">
+    <div id="dvTable" style="overflow-x:auto;" class="grid-100">
       <table class="table">
         <thead>
           <tr>
             <th>ID</th>
             <th>ORIGINAL URL</th>
-            <th>NEW URL</th>
+            <th style="min-width:150px;">NEW URL</th>
             <th>ACCESS</th>
             <th>REMOVE</th>
           </tr>

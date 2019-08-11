@@ -32,7 +32,7 @@ a{
 }
 
 .max-width{
-  max-width: 800px;
+  max-width: 900px;
   width:100%;
 }
 
@@ -58,16 +58,12 @@ a{
 .text{
   outline: none;
   border:1px solid #16ccf7;
-  max-width: 85%;
-  width:100%;
 }
 
 .btn{
   outline: none;
   border:none;
   background-color: #16ccf7;
-  max-width: 10%;
-  width:100%;
 }
 
 .btn:hover{
@@ -91,7 +87,7 @@ a{
 .btn-remove{
   outline: none;
   border:none;
-  background-color: #db4444;
+  background-color: #e67663;
   font-weight: bold;
   width: 100%;
 }
@@ -99,14 +95,14 @@ a{
 .btn-remove:disabled{
   outline: none;
   border:none;
-  background-color: #111;
+  background-color: #888;
   color:#FFF;
   font-weight: bold;
   width: 100%;
 }
 
 .btn-remove:hover{
-  background-color: #473030;
+  background-color: #d43115;
   cursor: pointer;
   color: #FFF;
 }
@@ -125,7 +121,7 @@ a{
   color:#FFF;
 }
 
-.table tbody tr td:hover a{
+.table tbody tr:hover a{
   color:#FFF;
 }
 
@@ -136,5 +132,6 @@ a{
 .link{
   padding:10px;
   margin:5px;
+  box-sizing: border-box;
   background-color:#EEE;
 }
