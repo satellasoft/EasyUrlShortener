@@ -54,3 +54,6 @@ Each table row corresponds to a URL, each column contains information:
 - To exit the page, simply click the **X** button located at the top right of the screen.
 - To refresh the page, simply click the **R** button located at the top right of the screen.
 
+# Author
+This system was created in a series of PHP video classes for satellasoft.com portal, all classes are in portuguese-br.
+www.satellasoft.com
